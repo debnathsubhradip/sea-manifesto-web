@@ -1,0 +1,230 @@
+{
+  "headerField" : {
+    "senderID" : "ICEGATEID",
+    "receiverID" : "INBOM1",
+    "indicator" : "T",
+    "messageID" : "SACHM23",
+    "sequenceOrControlNumber" : "5122",
+    "date" : "20200220",
+    "time" : "T14:26",
+    "reportingEvent" : "SAM"
+  },
+  "master" : {
+    "decRef" : {
+      "msgTyp" : "F",
+      "prtofRptng" : "INBOM1",
+      "jobNo" : "5122",
+      "jobDt" : "20200220",
+      "rptngEvent" : "SAM",
+      "mnfstNoRotnNo" : "1000008",
+      "mnfstDtRotnDt" : "20200117",
+      "errorCode" : [ {
+        "pathName" : "/master/decRef",
+        "errorCode" : "DRF024",
+        "errorMessage" : "Invalid Rotation/Voyage Call Number"
+      } ]
+    },
+    "authPrsn" : {
+      "errorCode" : [ {
+        "pathName" : "/master/authPrsn",
+        "errorCode" : "APR012",
+        "errorMessage" : "Invalid Carrier Code"
+      }, {
+        "pathName" : "/master/authPrsn",
+        "errorCode" : "APR011",
+        "errorMessage" : "Invalid Shipping Line Code"
+      }, {
+        "pathName" : "/master/authPrsn",
+        "errorCode" : "APR013",
+        "errorMessage" : "Invalid Terminal Operator Code"
+      } ]
+    },
+    "vesselDtls" : {
+      "errorCode" : [ {
+        "pathName" : "/master/vesselDtls",
+        "errorCode" : "VSL014",
+        "errorMessage" : "Invalid Mode of Transport"
+      }, {
+        "pathName" : "/master/vesselDtls",
+        "errorCode" : "VSL016",
+        "errorMessage" : "Invalid Transport Means Identity"
+      }, {
+        "pathName" : "/master/vesselDtls",
+        "errorCode" : "VSL018",
+        "errorMessage" : "Invalid Purpose of Call"
+      } ]
+    },
+    "voyageDtls" : {
+      "shipItnry" : [ {
+        "shipItnrySeq" : "-3",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "-2",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "-1",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "0",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "errorCode" : [ {
+        "pathName" : "/master/voyageDtls",
+        "errorCode" : "VGD019",
+        "errorMessage" : "Invalid Voyage Number"
+      }, {
+        "pathName" : "/master/voyageDtls",
+        "errorCode" : "VGD020",
+        "errorMessage" : "Invalid Voyage Call Number"
+      }, {
+        "pathName" : "/master/voyageDtls",
+        "errorCode" : "VGD022",
+        "errorMessage" : "Invalid Expected Time of Arrival"
+      }, {
+        "pathName" : "/master/voyageDtls",
+        "errorCode" : "VGD023",
+        "errorMessage" : "Invalid Expected Time of Departure"
+      }, {
+        "pathName" : "/master/voyageDtls",
+        "errorCode" : "VGD089",
+        "errorMessage" : "Total Equipment in Vessel Less than Cargo Equipment"
+      }, {
+        "pathName" : "/master/voyageDtls",
+        "errorCode" : "VGD090",
+        "errorMessage" : "Total Lines in Vessel Not Match with Cargo Lines"
+      } ]
+    },
+    "arvlDtls" : {
+      "errorCode" : [ {
+        "pathName" : "/master/arvlDtls",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    },
+    "mastrCnsgmtDec" : [ {
+      "trnshpr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnshpr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDoc" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDoc",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDocMsr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDocMsr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "itemDtls" : [ {
+        "crgoItemSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itemDtls",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "itnry" : [ null, {
+        "prtOfCallSeqNmbr" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ]
+    } ],
+    "prsnOnBoard" : [ {
+      "prsnOnBoardSeqNmbr" : "1",
+      "prsnDtls" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/prsnDtls",
+          "errorCode" : "PRD188",
+          "errorMessage" : null
+        }, {
+          "pathName" : "/master/prsnOnBoard/prsnDtls",
+          "errorCode" : "PRD189",
+          "errorMessage" : null
+        } ]
+      },
+      "prsnId" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/visaDtls",
+          "errorCode" : "PID179",
+          "errorMessage" : null
+        } ]
+      }
+    }, {
+      "prsnOnBoardSeqNmbr" : "2",
+      "prsnDtls" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/prsnDtls",
+          "errorCode" : "PRD188",
+          "errorMessage" : null
+        }, {
+          "pathName" : "/master/prsnOnBoard/prsnDtls",
+          "errorCode" : "PRD189",
+          "errorMessage" : null
+        } ]
+      },
+      "prsnId" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/visaDtls",
+          "errorCode" : "PID179",
+          "errorMessage" : null
+        } ]
+      }
+    } ],
+    "voyageTransportEquipment" : [ {
+      "equipmentSequenceNo" : "1",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "2",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    } ]
+  }
+}
