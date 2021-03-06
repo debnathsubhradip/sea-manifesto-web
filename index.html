@@ -26,9 +26,6 @@
         <script src="json-forms_files/markdown.js"></script>
         <script src="json-forms_files/bootstrap-select.js"></script>
         <script src="json-forms_files/defaults-en_US.js"></script>
-        <!--
-        <script src="//rawgit.com/brutusin/json-forms/master/dist/js/brutusin-json-forms.min.js"></script>
-         -->
         <script src="json-forms_files/brutusin-json-forms.js"></script>
         <script src="json-forms_files/brutusin-json-forms-bootstrap.js"></script>
         <script lang="javascript">
@@ -141,7 +138,6 @@
             var bf;
             
             function selectExample(selectedExampleIndex) {
-                // console.log(selectedExampleIndex);
                 document.getElementById("examples").selectedIndex = selectedExampleIndex;
                 input.schema = demos[selectedExampleIndex][1];
                 input.data = uploadfile;
@@ -179,10 +175,6 @@
                     message = "The was a syntax error in the schema JSON";
                     tabId = "schema";
                     eval("schema=" + inputString.schema);
-                    // if(inputString.data==JSON.stringify(uploadstring)){
-                    //     console.log("test");
-                    // }
-                    // console.log(typeof inputString.data);
                     if (inputString.data) {
                         message = "The was a syntax error in the initial data JSON";
                         tabId = "data";
@@ -223,7 +215,6 @@
                 bf.render(container, data);
             }
             
-            // alert(text);
             
             function readTextFile(file)
             {
@@ -236,7 +227,6 @@
                         if(rawFile.status === 200 || rawFile.status == 0)
                         {
                             allText = rawFile.responseText;
-                            // alert(allText);
                             
                         }
                     }
@@ -256,21 +246,12 @@
             file.onchange = function() {
                 var fileReader = new FileReader();
                 fileReader.readAsText(file.files[0]);
-                // fileReader.readAsText(file.files[0]);
                 fileReader.onload=function(){
                         uploadstring=(JSON.stringify(JSON.parse(fileReader.result),null,4));
                         alert("File Uploaded !\n")
                         uploadfile=JSON.parse(uploadstring);
                         selectExample(selectedDemo);
 
-
-                //         demos = [
-                // ["SAM",sam,uploadfile,null,"Manifest for Sea Arrival"],
-                // ["SAA",saa,uploadfile,null,"Manifest for Sea Arrival Ammendment"],
-                // ["SDM",sdm,uploadfile,null,"Manifest for Sea Departure"],
-                // ["SDA",sda,uploadfile,null,"Manifest for Sea Departure Ammendment"],
-                // ["SDN",sdn,uploadfile,null,"Manifest for Sea Departure Notification"],
-                // ["SEI",sei,uploadfile,null,"Manifest for Sea Entry Inward"]]
                 
                         
                 };
@@ -300,14 +281,11 @@
     downloadLink.innerHTML = "Download File";
     if (window.webkitURL != null)
     {
-        // Chrome allows the link to be clicked
-        // without actually adding it to the DOM.
         downloadLink.href = window.webkitURL.createObjectURL(textFileAsBlob);
     }
     else
     {
-        // Firefox requires the link to be added to the DOM
-        // before it can be clicked.
+        
         downloadLink.href = window.URL.createObjectURL(textFileAsBlob);
         downloadLink.onclick = destroyClickedElement;
         downloadLink.style.display = "none";
@@ -321,7 +299,6 @@
 
     </head>
     <body>
-        <!-- <a href="https://github.com/brutusin/json-forms/tree/gh-pages"><img style="position: absolute; top: 0; right: 0; border: 0; width: 149px; height: 149px;" src="json-forms_files/forkme.png" alt="Fork me on GitHub"></a> -->
         <div class="container">
             <h1><img alt="Butusin" src="json-forms_files/logo.png" style="border: 0; width: 50px; height: 50px;"><code>SEA MANIFESTO WEB</code> demo</h1>
 
@@ -347,36 +324,15 @@
                                         document.write("<option " + (selectedDemo === i ? "selected=true" : "") + ">" + demos[i][0] + "</option>");
                                     }
                                 </script>
-                                <!-- <option selected="selected">Dynamic schemas</option><option>Simple</option><option>Objects, arrays, enums, default, required, minItems, uniqueItems</option><option>Initial data</option><option>String validation</option><option>Numeric validation</option><option>Additional properties</option><option>oneOf example</option><option>Textarea example</option><option>Custom string formats</option><option>Pattern Properties</option><option>Definitions ($ref)</option><option>ReadOnly</option><option>Required v3, v4+</option> -->
+                                
                             </select>
                             <br>
-
-
-
-                            <!-- <ul class="nav nav-tabs" role="tablist">
-                                <li role="presentation" class="active"><a href="#schema" aria-controls="schema" role="tab" data-toggle="tab">Schema</a></li>
-                                <li role="presentation"><a href="#data" aria-controls="data" role="tab" data-toggle="tab">Initial data</a></li>
-                                <li role="presentation"><a href="#resolver" aria-controls="resolver" role="tab" data-toggle="tab">Schema resolver</a></li>
-                            </ul> -->
-                            <!-- Tab panes -->
-                            <!-- <div class="tab-content">
-                                <div role="tabpanel" class="tab-pane active" id="schema"><div class="CodeMirror cm-s-default"><div style="overflow: hidden; position: relative; width: 3px; height: 0px; top: 4px; left: 34px;"><textarea style="position: absolute; padding: 0px; width: 1px; height: 1em; outline: currentcolor none medium;" autocorrect="off" autocapitalize="none" spellcheck="false" tabindex="0" wrap="off"></textarea></div><div class="CodeMirror-vscrollbar" cm-not-content="true" style="display: block; bottom: 20px;"><div style="min-width: 1px; height: 448px;"></div></div><div class="CodeMirror-hscrollbar" cm-not-content="true" style="display: block; right: 20px; left: 30px;"><div style="height: 100%; min-height: 1px; width: 1643px;"></div></div><div class="CodeMirror-scrollbar-filler" cm-not-content="true" style="display: block; height: 20px; width: 20px;"></div><div class="CodeMirror-gutter-filler" cm-not-content="true"></div><div class="CodeMirror-scroll" tabindex="-1" draggable="true"><div class="CodeMirror-sizer" style="margin-left: 30px; margin-bottom: -20px; border-right-width: 10px; min-height: 448px; min-width: 1643.07px; padding-right: 20px; padding-bottom: 20px;"><div style="position: relative; top: 0px;"><div class="CodeMirror-lines"><div style="position: relative; outline: currentcolor none medium;"><div class="CodeMirror-measure">AخA</div><div class="CodeMirror-measure"></div><div style="position: relative; z-index: 1;"></div><div class="CodeMirror-cursors"><div class="CodeMirror-cursor" style="left: 4px; top: 0px; height: 20px;">&nbsp;</div></div><div class="CodeMirror-code" style=""><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">1</div></div><pre class=" CodeMirror-line "><span>{</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">2</div></div><pre class=" CodeMirror-line "><span>    <span class="cm-string">"$schema"</span>: <span class="cm-string">"http://json-schema.org/draft-03/schema#"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">3</div></div><pre class=" CodeMirror-line "><span>    <span class="cm-string">"type"</span>: <span class="cm-string">"object"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">4</div></div><pre class=" CodeMirror-line "><span>    <span class="cm-string">"properties"</span>: {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">5</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-string">"species"</span>: {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">6</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-string">"title"</span>: <span class="cm-string">"Species supported"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">7</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-string">"description"</span>: <span class="cm-string">"Changes in this property (`$.species`) trigger the resolution of the actual (depending on the values being selected) schema of a dependent property (`$.subspecies`)"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">8</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-string">"type"</span>: <span class="cm-string">"string"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">9</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-string">"enum"</span>: [</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">10</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-string">"human"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">11</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-string">"dog"</span>,</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">12</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-string">"cat"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">13</div></div><pre class=" CodeMirror-line "><span>            ],</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">14</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-string">"required"</span>: <span class="cm-atom">true</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">15</div></div><pre class=" CodeMirror-line "><span>        },</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">16</div></div><pre class=" CodeMirror-line "><span>        <span class="cm-string">"subspecies"</span>: {</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">17</div></div><pre class=" CodeMirror-line "><span>            <span class="cm-string">"dependsOn"</span>: [</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">18</div></div><pre class=" CodeMirror-line "><span>                <span class="cm-string">"species"</span></span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">19</div></div><pre class=" CodeMirror-line "><span>            ]</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">20</div></div><pre class=" CodeMirror-line "><span>        }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">21</div></div><pre class=" CodeMirror-line "><span>    }</span></pre></div><div style="position: relative;"><div class="CodeMirror-gutter-wrapper" style="left: -30px;"><div class="CodeMirror-linenumber CodeMirror-gutter-elt" style="left: 0px; width: 21px;">22</div></div><pre class=" CodeMirror-line "><span>}</span></pre></div></div></div></div></div></div><div style="position: absolute; height: 10px; width: 1px; top: 448px;"></div><div class="CodeMirror-gutters" style="height: 458px;"><div class="CodeMirror-gutter CodeMirror-linenumbers" style="width: 29px;"></div></div></div></div></div>
-                                <div role="tabpanel" class="tab-pane" id="data"></div>
-                                <div role="tabpanel" class="tab-pane" id="resolver"></div>
-                            </div>
-                            <div class="alert alert-danger in" role="alert" id="jsonAlert" style="display:none">
-                                <a href="#" onclick='$("#jsonAlert").hide();' class="close">×</a>
-                                <strong>Error!</strong> <span id="error-message"></span>
-                            </div> -->
-
-
 
                         </div>
 
                         <div class="panel-footer">
                             <input type="file" id="file" accept=".json">
                             <button class="btn btn-primary" id="buttonFile">Upload file</button>
-            <!-- <button class="btn btn-primary" id="buttonFile" onclick="init()">New Form</button><br><br> -->
                             <button class="btn btn-primary" onclick="generateForm()">Generate Form</button>
                             <button class="btn btn-primary" id="buttonFile" onclick="window.location.href='./index.html'">Refresh</button>
                                                         
@@ -410,7 +366,6 @@
                             <input type="text" placeholder="Date" id="date" name="date"><br><br>
                             <label for="declaration">"Declaration :&nbsp;"</label>
                             <input type="text" placeholder="Declaration" id="declaration" name="declaration"><br><br>
-                                <!-- <input type="submit" value="Submit">  -->
                               </form>
                             
                             <button class="btn btn-primary" onclick="alert(JSON.stringify(bf.getData(), null, 4))">Check Data</button>&nbsp;
