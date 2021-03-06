@@ -1,0 +1,520 @@
+{
+  "headerField" : {
+    "senderID" : "SAMTESTINGUSER",
+    "receiverID" : "INBOM1",
+    "indicator" : "T",
+    "messageID" : "SACHM23",
+    "sequenceOrControlNumber" : "19",
+    "date" : "20200730",
+    "time" : "T13:02",
+    "reportingEvent" : "SAM"
+  },
+  "master" : {
+    "decRef" : {
+      "msgTyp" : "F",
+      "prtofRptng" : "INBOM1",
+      "jobNo" : "19",
+      "jobDt" : "20200730",
+      "rptngEvent" : "SAM",
+      "mnfstNoRotnNo" : "1000030",
+      "mnfstDtRotnDt" : "20200117",
+      "vesselTypMvmt" : "FI",
+      "errorCode" : [ {
+        "pathName" : "/master/decRef",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    },
+    "authPrsn" : {
+      "errorCode" : [ {
+        "pathName" : "/master/authPrsn",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    },
+    "vesselDtls" : {
+      "errorCode" : [ {
+        "pathName" : "/master/vesselDtls",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    },
+    "voyageDtls" : {
+      "shipItnry" : [ {
+        "shipItnrySeq" : "-3",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "-2",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "-1",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "0",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "shipItnrySeq" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/voyageDtls/shipItnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "errorCode" : [ {
+        "pathName" : "/master/vesselDtls/voyageDtls",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    },
+    "mastrCnsgmtDec" : [ {
+      "MCRef" : {
+        "lineNo" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/MCRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "prevRef" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/prevRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "locCstm" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/locCstm",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnshpr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnshpr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDoc" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDoc",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDocMsr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDocMsr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "itemDtls" : [ {
+        "crgoItemSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : null,
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "trnsprtEqmt" : [ {
+        "eqmtSeqNo" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "eqmtSeqNo" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "itnry" : [ {
+        "prtOfCallSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "mcResponse" : {
+        "mcinPcin" : "20PC300814100044300",
+        "cinType" : "PCIN"
+      }
+    }, {
+      "MCRef" : {
+        "lineNo" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/MCRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "prevRef" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/prevRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "locCstm" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/locCstm",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnshpr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnshpr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDoc" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDoc",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDocMsr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDocMsr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "itemDtls" : [ {
+        "crgoItemSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : null,
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "trnsprtEqmt" : [ {
+        "eqmtSeqNo" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "eqmtSeqNo" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "itnry" : [ {
+        "prtOfCallSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "prtOfCallSeqNmbr" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "mcResponse" : {
+        "mcinPcin" : "20PC300814100044600",
+        "cinType" : "PCIN"
+      }
+    }, {
+      "MCRef" : {
+        "lineNo" : "3",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/MCRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "prevRef" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/prevRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "locCstm" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/locCstm",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnshpr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnshpr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDoc" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDoc",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDocMsr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDocMsr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "itemDtls" : [ {
+        "crgoItemSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : null,
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "trnsprtEqmt" : [ {
+        "eqmtSeqNo" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "eqmtSeqNo" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "itnry" : [ {
+        "prtOfCallSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "prtOfCallSeqNmbr" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "mcResponse" : {
+        "mcinPcin" : "20PC300814100044500",
+        "cinType" : "PCIN"
+      }
+    }, {
+      "MCRef" : {
+        "lineNo" : "4",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/MCRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "prevRef" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/prevRef",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "locCstm" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/locCstm",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnshpr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnshpr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDoc" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDoc",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtDocMsr" : {
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtDocMsr",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "trnsprtEqmt" : [ {
+        "eqmtSeqNo" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }, {
+        "eqmtSeqNo" : "2",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/trnsprtEqmt",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "itnry" : [ {
+        "prtOfCallSeqNmbr" : "1",
+        "errorCode" : [ {
+          "pathName" : "/master/mastrCnsgmtDec/itnry",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      } ],
+      "mcResponse" : {
+        "mcinPcin" : "20MC300814100044400",
+        "cinType" : "MCIN"
+      }
+    } ],
+    "prsnOnBoard" : [ {
+      "prsnOnBoardSeqNmbr" : "1",
+      "prsnDtls" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/prsnDtls",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "prsnId" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/prsnId",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "visaDtls" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/visaDtls",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }
+    }, {
+      "prsnOnBoardSeqNmbr" : "2",
+      "prsnDtls" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/prsnDtls",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "prsnId" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/prsnId",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      },
+      "visaDtls" : {
+        "errorCode" : [ {
+          "pathName" : "/master/prsnOnBoard/visaDtls",
+          "errorCode" : "000",
+          "errorMessage" : "Successful"
+        } ]
+      }
+    } ],
+    "voyageTransportEquipment" : [ {
+      "equipmentSequenceNo" : "1",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "2",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "3",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "4",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "5",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "6",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "7",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    }, {
+      "equipmentSequenceNo" : "8",
+      "errorCode" : [ {
+        "pathName" : "/master/voyageTransportEquipment",
+        "errorCode" : "000",
+        "errorMessage" : "Successful"
+      } ]
+    } ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+	"headerField": {
+		"senderID": "ICEGATEID",
+		"receiverID": "INBOM1",
+		"indicator": "T",
+		"messageID": "SACHM23",
+		"sequenceOrControlNumber": 5202,
+		"date": "20200127",
+		"time": "T14:30",
+		"reportingEvent": "SEI"
+	},
+	"master": {
+		"decRef": {
+			"msgTyp": "F",
+			"prtofRptng": "INBOM1",
+			"jobNo": 5202,
+			"jobDt": "20200127",
+			"rptngEvent": "SEI",
+			"mnfstNoRotnNo": 1000006,
+			"mnfstDtRotnDt": "20200117",
+			"vesselTypMvmt": "FI"
+		},
+		"authPrsn": {
+			"sbmtrTyp": "ASC",
+			"sbmtrCd": "EEEPS5353E",
+			"authReprsntvCd": "AXTPD0731B",
+			"authSeaCarrierCd": "EEEPS5353E",
+			"shpngLineBondNmbr": "",
+			"trmnlOprtrCd": "INBOM1CWC1"
+		},
+		"vesselDtls": {
+			"modeOfTrnsprt": "1",
+			"typOfTrnsprtMeans": "10",
+			"trnsprtMeansId": "9241205"
+		},
+		"arvlDtls": {
+			"nmbrOfPsngrs": 0,
+			"nmbrOfCrew": 2,
+			"lightHouseDues": 10000.00,
+			"totalNoOfCntrsLanded": 0,
+			"totalNoOfCntrsLoaded": 0,
+			"totalNmbrOfPrsnsOnBoard": 2,
+			"totalNoOfTrnsprtEqmtRprtdOnArvlDptr": 2,
+			"totalNmbrOfTrnsprtContractsRprtdOnArvlDptr": 0
+		},
+
+		"prsnOnBoard": [{
+				"prsnOnBoardSeqNmbr": 1,
+				"crewEfct": [{
+					"crewEfctsSeqNmbr": 1,
+					"crewEfctDescCdd": "003",
+					"crewEfctsDesc": "Wine",
+					"crewEfctQntyOnbrd": 5,
+					"crewEfctQntyCdOnbrd": "LTR"
+				}]
+			},
+			{
+				"prsnOnBoardSeqNmbr": 2,
+				"crewEfct": [{
+					"crewEfctsSeqNmbr": 1,
+					"crewEfctDescCdd": "003",
+					"crewEfctsDesc": "Wine",
+					"crewEfctQntyOnbrd": 5,
+					"crewEfctQntyCdOnbrd": "LTR"
+				}]
+			}
+		],
+		"shipStores": [{
+			"seqNmbr": 1,
+			"articleNameCdd": "011",
+			"articleNameText": "Hand gun MK-18",
+			"locOnbrdText": "",
+			"qntyOnbrd": 5,
+			"qntyCdOnbrd": "UNT"
+		}]
+
+	},
+	"digSign": {
+		"startSignature": "",
+		"startCertificate": "",
+		"signerVersion": ""
+	}
+}

@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="json-forms_files/bootstrap-select.css">
         <link rel="stylesheet" href="json-forms_files/octicons.css">
         <link rel="stylesheet" href="json-forms_files/brutusin-json-forms.css">
+        <link rel="stylesheet" href="json-forms_files/custom.css">
         <link rel="icon" href="./json-forms_files/logo.png">
 
         <style>
@@ -40,24 +41,29 @@
             var codeMirrors = new Object();
             var input = new Object();
             var inputString = new Object();
+            var uploadfile
+            var uploadstring=null;
+            var uploadcheck;
             var title;
             var desc;
             var selectedDemo;
             var allText;
+            
             var sam =JSON.parse(readTextFile("./json-forms_files/schema/SAM Schema.json"));
             var saa =JSON.parse(readTextFile("./json-forms_files/schema/SAA_v1 Schema.json"));
             var sdm =JSON.parse(readTextFile("./json-forms_files/schema/SDM Schema.json"));
             var sda =JSON.parse(readTextFile("./json-forms_files/schema/SDA Schema.json"));
             var sdn =JSON.parse(readTextFile("./json-forms_files/schema/SDN Schema.json"));
             var sei =JSON.parse(readTextFile("./json-forms_files/schema/SEI Schema.json"));
-            console.log(saa);
+            // console.log(saa);
+
             var demos = [
-                ["SAM",sam,null,null,"Manifest for Sea Arrival"],
-                ["SAA",sam,null,null,"Manifest for Sea Arrival Ammendment"],
-                ["SDM",sam,null,null,"Manifest for Sea Departure"],
-                ["SDA",sam,null,null,"Manifest for Sea Departure Ammendment"],
-                ["SDN",sam,null,null,"Manifest for Sea Departure Notification"],
-                ["SEI",sam,null,null,"Manifest for Sea Entry Inward"]
+                ["SAM",sam,uploadfile,null,"Manifest for Sea Arrival"],
+                ["SAA",saa,uploadfile,null,"Manifest for Sea Arrival Ammendment"],
+                ["SDM",sdm,uploadfile,null,"Manifest for Sea Departure"],
+                ["SDA",sda,uploadfile,null,"Manifest for Sea Departure Ammendment"],
+                ["SDN",sdn,uploadfile,null,"Manifest for Sea Departure Notification"],
+                ["SEI",sei,uploadfile,null,"Manifest for Sea Entry Inward"]
 
                 // ["Dynamic schemas",
                 //     {"$schema": "http://json-schema.org/draft-03/schema#", "type": "object", "properties": {"species": {"title": "Species supported", "description": "Changes in this property (`$.species`) trigger the resolution of the actual (depending on the values being selected) schema of a dependent property (`$.subspecies`)", "type": "string", "enum": ["human", "dog", "cat"], "required": true}, "subspecies": {"dependsOn": ["species"]}}},
@@ -133,11 +139,12 @@
 
             var selectedTab = "schema";
             var bf;
-
+            
             function selectExample(selectedExampleIndex) {
+                // console.log(selectedExampleIndex);
                 document.getElementById("examples").selectedIndex = selectedExampleIndex;
                 input.schema = demos[selectedExampleIndex][1];
-                input.data = demos[selectedExampleIndex][2];
+                input.data = uploadfile;
                 eval("input.resolver=" + demos[selectedExampleIndex][3]);
                 inputString.schema = JSON.stringify(input.schema, null, 2);
                 inputString.data = input.data ? JSON.stringify(input.data, null, 2) : "";
@@ -172,6 +179,10 @@
                     message = "The was a syntax error in the schema JSON";
                     tabId = "schema";
                     eval("schema=" + inputString.schema);
+                    // if(inputString.data==JSON.stringify(uploadstring)){
+                    //     console.log("test");
+                    // }
+                    // console.log(typeof inputString.data);
                     if (inputString.data) {
                         message = "The was a syntax error in the initial data JSON";
                         tabId = "data";
@@ -234,6 +245,38 @@
                 return allText;
             }
 
+            window.onload = function() { 
+            var buttonFile = document.getElementById("buttonFile");
+            var file = document.getElementById("file");
+
+            buttonFile.onclick = function() {
+                document.getElementById("file").click();
+            };
+
+            file.onchange = function() {
+                var fileReader = new FileReader();
+                fileReader.readAsText(file.files[0]);
+                // fileReader.readAsText(file.files[0]);
+                fileReader.onload=function(){
+                        uploadstring=(JSON.stringify(JSON.parse(fileReader.result),null,4));
+                        alert("File Uploaded !\n")
+                        uploadfile=JSON.parse(uploadstring);
+                        selectExample(selectedDemo);
+
+
+                //         demos = [
+                // ["SAM",sam,uploadfile,null,"Manifest for Sea Arrival"],
+                // ["SAA",saa,uploadfile,null,"Manifest for Sea Arrival Ammendment"],
+                // ["SDM",sdm,uploadfile,null,"Manifest for Sea Departure"],
+                // ["SDA",sda,uploadfile,null,"Manifest for Sea Departure Ammendment"],
+                // ["SDN",sdn,uploadfile,null,"Manifest for Sea Departure Notification"],
+                // ["SEI",sei,uploadfile,null,"Manifest for Sea Entry Inward"]]
+                
+                        
+                };
+            };
+            };
+
       
             function saveTextAsFile(){
             var msgtyp=document.getElementById("messagetyp").value;
@@ -285,6 +328,7 @@
             <blockquote>
                 <p><strong>SEA MANIFESTO WEB</strong>, supports dynamic form generation for using to create manifest files for Customs</p>
             </blockquote>
+            
             <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
                 <div class="panel panel-primary">
                     <div class="panel-heading" role="tab" id="headingOne">
@@ -330,7 +374,12 @@
                         </div>
 
                         <div class="panel-footer">
-                            <button class="btn btn-primary" onclick="generateForm()">New Form</button> 
+                            <input type="file" id="file" accept=".json">
+                            <button class="btn btn-primary" id="buttonFile">Upload file</button>
+            <!-- <button class="btn btn-primary" id="buttonFile" onclick="init()">New Form</button><br><br> -->
+                            <button class="btn btn-primary" onclick="generateForm()">Generate Form</button>
+                            <button class="btn btn-primary" id="buttonFile" onclick="window.location.href='./index.html'">Refresh</button>
+                                                        
                         </div>
                     </div>
                 </div>

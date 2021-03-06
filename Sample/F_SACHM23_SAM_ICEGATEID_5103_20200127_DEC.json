@@ -1,0 +1,168 @@
+{
+	"headerField": {
+		"senderID": "ICEGATEID",
+		"receiverID": "INBOM1",
+		"versionNo": "SAM1102",
+		"indicator": "T",
+		"messageID": "SACHM23",
+		"sequenceOrControlNumber": 5103,
+		"date": "20200127",
+		"time": "T11:30",
+		"reportingEvent": "SAM"
+	},
+	"master": {
+		"decRef": {
+			"msgTyp": "F",
+			"prtofRptng": "INBOM1",
+			"jobNo": 5103,
+			"jobDt": "20200127",
+			"rptngEvent": "SAM",
+			"mnfstNoRotnNo": 1000006,
+			"mnfstDtRotnDt": "20200117",
+			"vesselTypMvmt": "FI"
+		},
+		"authPrsn": {
+			"sbmtrTyp": "ASC",
+			"sbmtrCd": "EEEPS5353E",
+			"authReprsntvCd": "AXTPD0731B",
+			"shpngLineCd": "MSC",
+			"authSeaCarrierCd": "AACCM7663A",
+			"masterName": "CAPT FIRSTNAME LASTNAME",
+			"shpngLineBondNmbr": "1000000250",
+			"trmnlOprtrCd": "INBOM1CWC1"
+		},
+		"vesselDtls": {
+			"modeOfTrnsprt": "1",
+			"typOfTrnsprtMeans": "10",
+			"trnsprtMeansId": "9241205",
+			"purposeOfCall": "1",
+			"shipTyp": "50"
+		},
+		"voyageDtls": {
+			"voyageNo": "2001",
+			"cnvnceRefNmbr": "2001004",
+			"totalNoOfTrnsprtEqmtMnfsted": "2",
+			"crgoDescCdd": "2",
+		      "briefCrgoDesc": "Empty Containers",
+		      "totalNmbrOfLines": 1,
+		      "exptdDtAndTimeOfArvl": "20200131T22:45",
+		      "exptdDtAndTimeOfDptr": "20200201T10:45",
+		      "nmbrOfPsngrsMnfsted": 0,
+		      "nmbrOfCrewMnfsted": 2,
+	"shipItnry": [
+        {
+          "shipItnrySeq": "-3",
+          "prtOfCallCdd": "DECUX"
+        },
+        {
+          "shipItnrySeq": "-2",
+          "prtOfCallCdd": "IEDUB"
+        },
+        {
+          "shipItnrySeq": "-1",
+          "prtOfCallCdd": "AEDXB"
+        },
+        {
+          "shipItnrySeq": "0",
+          "prtOfCallCdd": "INBOM1",
+          "prtOfCallName": "BOMBAY"
+        },
+        {
+          "shipItnrySeq": "1",
+          "prtOfCallCdd": "INCOK1",
+          "prtOfCallName": "COCHIN"
+        },
+        {
+          "shipItnrySeq": "2",
+          "prtOfCallCdd": "LKCMB",
+          "prtOfCallName": "COLUMBO"
+        }
+      ]
+    },
+    "prsnOnBoard": [
+      {
+        "prsnOnBoardSeqNmbr": 1,
+        "prsnDtls": {
+          "prsnTypCdd": "FM",
+          "prsnFamilyName": "FIRSTNAME",
+          "prsnGivenName": "LASTNAME",
+          "prsnNatnltyCdd": "US",
+          "psngrInTransitIndctr": 0,
+          "crewmemberRankOrRatingCdd": "CAPTAIN",
+          "psngrPrtOfEmbrktnCdd": "DECUX",
+          "psngrPrtOfDsmbrktnCdd": "LKCMB",
+          "prsnGenderCdd": "1",
+          "prsnDtOfBirth": "19740808",
+          "prsnPlaceOfBirthName": "OHIO",
+          "prsnCntryOfBirthCdd": "US"
+        },
+        "prsnId": {
+          "prsnIdDocExpiryDt": "20200808",
+          "prsnIdOrTravelDocIssuingNationCdd": "US",
+          "prsnIdOrTravelDocNmbr": "S90006875",
+          "prsnIdOrTravelDocTypCdd": "039"
+        }
+      },
+      {
+        "prsnOnBoardSeqNmbr": 2,
+        "prsnDtls": {
+          "prsnTypCdd": "FM",
+          "prsnFamilyName": "SOMENAME",
+          "prsnGivenName": "SOMELASTNAME",
+          "prsnNatnltyCdd": "TR",
+          "psngrInTransitIndctr": 0,
+          "crewmemberRankOrRatingCdd": "ABLESEAM",
+          "psngrPrtOfEmbrktnCdd": "DECUX",
+          "psngrPrtOfDsmbrktnCdd": "LKCMB",
+          "prsnGenderCdd": "1",
+          "prsnDtOfBirth": "19740808",
+          "prsnPlaceOfBirthName": "Ankara",
+          "prsnCntryOfBirthCdd": "TR"
+        },
+        "prsnId": {
+          "prsnIdDocExpiryDt": "20200805",
+          "prsnIdOrTravelDocIssuingNationCdd": "TR",
+          "prsnIdOrTravelDocNmbr": "T3456875",
+          "prsnIdOrTravelDocTypCdd": "039"
+        }
+      }
+    ],
+    "voyageTransportEquipment": [
+     {
+        "equipmentSequenceNo": 1,
+        "equipmentId": "ACEU1234561",
+        "equipmentType": "CN",
+        "equipmentSize": "4000",
+        "equipmentLoadStatus": "EMP",
+        "additionalEquipmentHold": "",
+        "equipmentSealType": "BTSL",
+        "equipmentSealNumber": "123ED3",
+        "otherEquipmentId": "",
+        "socFlag": "Y",
+        "containerAgentCode": "EEEPS5353E",
+        "containerWeight": 1500,
+        "totalNumberOfPackages": 0
+          },
+          {
+        "equipmentSequenceNo": 2,
+        "equipmentId": "AVRU1234561",
+        "equipmentType": "CN",
+        "equipmentSize": "4000",
+        "equipmentLoadStatus": "EMP",
+        "additionalEquipmentHold": "",
+        "equipmentSealType": "BTSL",
+        "equipmentSealNumber": "123ED5",
+        "otherEquipmentId": "",
+        "socFlag": "Y",
+        "containerAgentCode": "EEEPS5353E",
+        "containerWeight": 1500,
+        "totalNumberOfPackages": 0
+          }
+    ]
+  },
+  "digSign": {
+    "startSignature": "",
+    "startCertificate": "",
+    "signerVersion": ""
+  }
+}

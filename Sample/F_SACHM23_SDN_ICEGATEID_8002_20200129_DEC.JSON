@@ -1,0 +1,59 @@
+{
+	"headerField": {
+		"senderID": "ICEGATEID",
+		"receiverID": "INNSA1",
+		"versionNo": "SAM1102",
+		"indicator": "T",
+		"messageID": "SACHM23",
+		"sequenceOrControlNumber": 8002,
+		"date": "20200129",
+		"time": "T12:30",
+		"reportingEvent": "SDN"
+	},
+	"master": {
+		"decRef": {
+			"msgTyp": "F",
+			"prtofRptng": "INBOM1",
+			"jobNo": 8002,
+			"jobDt": "20200129",
+			"rptngEvent": "SDM",
+			"mnfstNoRotnNo": 1000006,
+			"mnfstDtRotnDt": "20200117",
+			"vesselTypMvmt": "FI"
+		},
+		"authPrsn": {
+			"sbmtrTyp": "ASC",
+			"sbmtrCd": "EEEPS5353E",
+			"authReprsntvCd": "AXTPD0731B",
+			"shpngLineCd": "MSC",
+			"authSeaCarrierCd": "AACCM7663A",
+			"masterName": "CAPT FIRSTNAME LASTNAME",
+			"shpngLineBondNmbr": "1000000250",
+			"trmnlOprtrCd": "INBOM1CWC1"
+		},
+		"vesselDtls": {
+			"modeOfTrnsprt": "1",
+			"typOfTrnsprtMeans": "10",
+			"trnsprtMeansId": "9241205",
+			"purposeOfCall": "1",
+			"shipTyp": "50"
+		},
+		"arvlDtls": {
+			"nmbrOfPsngrs": 0,
+			"nmbrOfCrew": 2,
+			"lightHouseDues": 10000.00,
+			"totalNoOfCntrsLanded": 0,
+			"totalNoOfCntrsLoaded": 0,
+			"totalNmbrOfPrsnsOnBoard": 2,
+			"totalNoOfTrnsprtEqmtRprtdOnArvlDptr": 2,
+			"totalNmbrOfTrnsprtContractsRprtdOnArvlDptr": 0
+		}
+
+
+	},
+	"digSign": {
+		"startSignature": "",
+		"startCertificate": "",
+		"signerVersion": ""
+	}
+}
