@@ -2578,29 +2578,6 @@
 					}
 				}
 			}
-		},
-		"digSign": {
-			"type": "object",
-			"description": "digi Sign",
-			"required": [
-				"startSignature",
-				"startCertificate",
-				"signerVersion"
-			],
-			"properties": {
-				"startSignature": {
-					"type": "string",
-					"description": "Start Signature"
-				},
-				"startCertificate": {
-					"type": "string",
-					"description": "Start Certificate"
-				},
-				"signerVersion": {
-					"type": "string",
-					"description": "Signer Version"
-				}
-			}
 		}
 	}
 }
