@@ -1,3 +1,15 @@
 #file{
     display: none;
   }
+#digitalsigndiv{
+  border: 0.1em rgb(255, 108, 108) solid;
+  border-left: 1em rgb(245, 102, 102) solid;
+  width: 100%;
+  /* box-sizing: inherit; */
+  margin: auto;
+  padding: 1em;
+}
+
+#dev{
+  font-size: 0.8em;
+}
